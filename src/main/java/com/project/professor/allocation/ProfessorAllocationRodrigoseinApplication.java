@@ -13,4 +13,8 @@ public class ProfessorAllocationRodrigoseinApplication {
 }
 //Testando Commit.
 //Adicionando o segundo comentário.
+<<<<<<< HEAD
 //Comentario na main
+=======
+//Testando branch_1
+>>>>>>> branch_1
