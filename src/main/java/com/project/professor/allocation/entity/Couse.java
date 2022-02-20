@@ -3,6 +3,8 @@ package com.project.professor.allocation.entity;
 public class Couse {
 
 	private Long id;
+	private String name;
+	
 	public Long getId() {
 		return id;
 	}
@@ -15,6 +17,6 @@ public class Couse {
 	public void setName(String name) {
 		this.name = name;
 	}
-	private String name;
+
 	
 }
