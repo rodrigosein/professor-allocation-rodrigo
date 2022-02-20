@@ -11,7 +11,3 @@ public class ProfessorAllocationRodrigoseinApplication {
 	}
 
 }
-//Testando Commit
-//Adicionando o segundo comentário
-//Comentario na main
-//Testando branch_1
