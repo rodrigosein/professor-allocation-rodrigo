@@ -21,6 +21,7 @@ public class Allocation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private DayOfWeek day;
@@ -30,16 +31,13 @@ public class Allocation {
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date end;
-	
-	@Column(name = "course_id", nullable = false, unique = true)
+	@Column(name = "course_id", nullable = false)
 	private Long courseId;
-	@Column(name = "professor_id", nullable = false, unique = true)
+	@Column(name = "professor_id", nullable = false)
 	private Long professorId;
-	
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "professor_id", updatable = false, insertable = false, nullable = false)
 	private Professor prof;
-	
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "course_id", updatable = false, insertable = false, nullable = false)
 	private Course curso;
