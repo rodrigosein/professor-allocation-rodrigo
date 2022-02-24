@@ -17,11 +17,11 @@ import javax.persistence.TemporalType;
 
 @Entity
 public class Allocation {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private DayOfWeek day;
@@ -41,43 +41,53 @@ public class Allocation {
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "course_id", updatable = false, insertable = false, nullable = false)
 	private Course curso;
-	
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public DayOfWeek getDay() {
 		return day;
 	}
+
 	public void setDay(DayOfWeek day) {
 		this.day = day;
 	}
+
 	public Date getStart() {
 		return start;
 	}
+
 	public void setStart(Date start) {
 		this.start = start;
 	}
+
 	public Date getEnd() {
 		return end;
 	}
+
 	public void setEnd(Date end) {
 		this.end = end;
 	}
+
 	public Long getCourseId() {
 		return courseId;
 	}
+
 	public void setCourseId(Long courseId) {
 		this.courseId = courseId;
 	}
+
 	public Long getProfessorId() {
 		return professorId;
 	}
+
 	public void setProfessorId(Long professorId) {
 		this.professorId = professorId;
 	}
 
-	
 }
