@@ -8,4 +8,5 @@ import com.project.professor.allocation.entity.Professor;
 @Repository
 public interface ProfessorRepository extends JpaRepository<Professor, Long>{
 
+
 }
