@@ -38,13 +38,12 @@ public class AllocationRepositoryTest {
 	@Test
 	public void findById() {
 		// Arrange
-		
-		//Act
-		Optional<Allocation> optional = allocationRepository.findById(3L);
-		
-		Allocation allocation = optional.orElseGet(null);
-		
+
+		// Act
+		Optional<Allocation> optional = allocationRepository.findById(14L);
+
 		// Print
+		Allocation allocation = optional.orElse(null);
 		System.out.println(allocation);
 	}
 
@@ -72,9 +71,9 @@ public class AllocationRepositoryTest {
 	public void save_create() throws ParseException {
 		// Arrange
 		Allocation allocation = new Allocation();
-		allocation.setDay(DayOfWeek.FRIDAY);
-		allocation.setEnd(sdf.parse("'10:00:00"));
-		allocation.setStart(sdf.parse("'12:00:00"));
+		allocation.setDay(DayOfWeek.MONDAY);
+		allocation.setEnd(sdf.parse("12:00-0300"));
+		allocation.setStart(sdf.parse("10:00-0300"));
 		allocation.setProfessorId(1L);
 		allocation.setCourseId(2L);
 		// Act
@@ -88,9 +87,9 @@ public class AllocationRepositoryTest {
 		// Arrange
 		Allocation allocation = new Allocation();
 		allocation.setId(3L);
-		allocation.setDay(DayOfWeek.FRIDAY);
-		allocation.setEnd(sdf.parse("10:00-0300"));
-		allocation.setStart(sdf.parse("12:00-0300"));
+		allocation.setDay(DayOfWeek.MONDAY);
+		allocation.setEnd(sdf.parse("12:00-0300"));
+		allocation.setStart(sdf.parse("10:00-0300"));
 		allocation.setProfessorId(1L);
 		allocation.setCourseId(2L);
 		// Act
@@ -102,9 +101,9 @@ public class AllocationRepositoryTest {
 	@Test
 	public void deleteById() {
 		// Arrange
-		
+
 		// Act
-		allocationRepository.deleteById(3L);
+		allocationRepository.deleteById(11L);
 	}
 
 	@Test
