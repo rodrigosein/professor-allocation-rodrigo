@@ -40,7 +40,7 @@ public class AllocationRepositoryTest {
 		// Arrange
 
 		// Act
-		Optional<Allocation> optional = allocationRepository.findById(14L);
+		Optional<Allocation> optional = allocationRepository.findById(2L);
 
 		// Print
 		Allocation allocation = optional.orElse(null);
