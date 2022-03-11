@@ -16,6 +16,7 @@ public class AllocationService {
 	public AllocationService(AllocationRepository allocationRepository) {
 		super();
 		this.allocationRepository = allocationRepository;
+
 	}
 
 	// CRUD: READ all
@@ -52,7 +53,7 @@ public class AllocationService {
 
 	private Allocation saveInternal(Allocation allocation) {
 		if (hasCollision(allocation)) {
-			throw new RuntimeException();
+			throw new RuntimeException("hasCollition");
 		} else {
 			Allocation allocationNew = allocationRepository.save(allocation);
 			return allocationNew;
